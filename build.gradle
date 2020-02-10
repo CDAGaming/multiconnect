@@ -83,6 +83,10 @@ repositories {
 	}
 }
 
+minecraft {
+	customManifest = "https://gist.githubusercontent.com/modmuss50/40bbf95e8df3e227bfbfcf319093ccdc/raw/1_15_combat-6.json"
+}
+
 dependencies {
 	//to change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"

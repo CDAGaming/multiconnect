@@ -1,6 +1,7 @@
 package net.earthcomputer.multiconnect.protocols;
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
+import net.earthcomputer.multiconnect.protocols.V1_15_combat_6.Protocol_1_15_combat_6;
 import net.earthcomputer.multiconnect.protocols.v1_12.Protocol_1_12;
 import net.earthcomputer.multiconnect.protocols.v1_12_1.Protocol_1_12_1;
 import net.earthcomputer.multiconnect.protocols.v1_12_2.Protocol_1_12_2;
@@ -66,7 +67,8 @@ public class ProtocolRegistry {
     }
 
     static {
-        register(V1_15_2, new Protocol_1_15_2());
+        register(V1_15_combat_6, new Protocol_1_15_combat_6());
+        register(V1_15_2, new Protocol_1_15_2(), Protocol_1_15_2::registerTranslators);
         register(V1_15_1, new Protocol_1_15_1());
         register(V1_15, new Protocol_1_15());
         register(V1_14_4, new Protocol_1_14_4(), Protocol_1_14_4::registerTranslators);
