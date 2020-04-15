@@ -9,7 +9,6 @@ import java.util.List;
 /**
  * The MultiConnect API
  */
-@Mod("multiconnect-api")
 public class MultiConnectAPI {
 
     static MultiConnectAPI INSTANCE = new MultiConnectAPI();
