@@ -39,6 +39,7 @@
     "connect.MixinDisconnectedScreen",
     "connect.MixinMinecraftClient",
     "connect.MixinMinecraftServer",
+    "connect.MixinMultiplayerScreen",
     "connect.MixinReloadableResourceManagerImpl",
     "connect.MixinServerList",
     "connect.MixinServerListIcon",
