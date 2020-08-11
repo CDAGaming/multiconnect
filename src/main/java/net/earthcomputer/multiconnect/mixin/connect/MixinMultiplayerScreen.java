@@ -27,8 +27,8 @@ public class MixinMultiplayerScreen extends Screen {
 
     @Inject(method = "init", at = @At("RETURN"))
     private void createButtons(CallbackInfo ci) {
-        forceProtocolLabel = new TranslatableText("multiconnect.changeForcedProtocol").append(" ->");
-        protocolSelector = new DropDownWidget<>(width - 80, 5, 70, 20, ConnectionInfo.globalForcedProtocolVersion, mode -> new LiteralText(mode.getName()));
+        forceProtocolLabel = new TranslatableText("multiconnect.changeForcedProtocol").append(" ->").asOrderedText();
+        protocolSelector = new DropDownWidget<>(width - 80, 5, 75, 20, ConnectionInfo.globalForcedProtocolVersion, mode -> new LiteralText(mode.getName()));
         ConnectionMode.populateDropDownWidget(protocolSelector);
         children.add(0, protocolSelector);
     }
