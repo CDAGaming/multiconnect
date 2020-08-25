@@ -47,6 +47,7 @@ public class ConnectionHandler {
 
         if (addressField != null) {
             int forcedVersion = ServersExt.getInstance().getForcedProtocol(addressField);
+            forcedVersion = forcedVersion == ConnectionMode.AUTO.getValue() ? ServersExt.getInstance().getForcedProtocol("global") : forcedVersion;
             if (forcedVersion != ConnectionMode.AUTO.getValue()) {
                 ConnectionInfo.protocolVersion = forcedVersion;
                 LOGGER.info("Protocol version forced to " + ConnectionInfo.protocolVersion + " (" + ConnectionMode.byValue(forcedVersion).getName() + ")");
