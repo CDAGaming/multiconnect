@@ -47,6 +47,7 @@
     "connect.MixinDirectConnectScreen",
     "connect.MixinDisconnectedScreen",
     "connect.MixinMinecraftClient",
+    "connect.MixinMultiplayerScreen",
     "connect.MixinServerList",
     "connect.MixinServerListIcon"
   ],
